@@ -6,7 +6,11 @@ const somethingWillHappen = new Promise( (resolve, reject) => {
             reject ('Whoooops')
         }
     })
-somethingWillHappen().then().catch()
+somethingWillHappen().then(
+    response => console.log(response)
+).catch(
+    err => console.log(err)
+)
 
 const somethingWillHappen2 = () => {
     return new Promise ((resolve, reject) => {
